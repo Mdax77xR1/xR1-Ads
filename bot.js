@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const fs = require("fs"); 
 const jimp = require('jimp');   
-var prefix = "$"
+var prefix = "R"
 const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -38,7 +38,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     xR1Server' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`xR1 BroadCast .`,"https://www.twitch.tv/Mdax77xR1")
+client.user.setGame(`xR1,Ads .`,"https://www.twitch.tv/Mdax77xR1")
 client.user.setStatus("online")
  
 });
@@ -52,7 +52,7 @@ client.user.setStatus("online")
 
  client.on('message', message => {    
               if(!message.channel.guild) return;
-    if(message.content.startsWith('$bc')) {
+    if(message.content.startsWith('Rbc')) {
     if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
   if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
     let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
